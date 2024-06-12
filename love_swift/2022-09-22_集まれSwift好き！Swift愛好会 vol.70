@@ -1,0 +1,15 @@
+# [集まれSwift好き！Swift愛好会 vol\.70 @ オンライン](https://love-swift.connpass.com/event/259463/?utm_campaign=event_participate_to_follower&utm_source=notifications&utm_medium=twitter)
+
+- XCBBuildServiceProxyKit触ってみる	noppe
+  - 登壇駆動開発に尽きる
+- Task.initのクロージャーに[weak self]はいらない。Task.detachedとTaskGroup.addTaskも同様	佐藤タケシ
+  - 一冊でマスター！Swift Concurrency入門が出ました！
+- レトロゲームを楽しむ環境を構築する続き	Sam Akada
+- iOSDC2022 初めてiOSDCに登壇&スタッフ参加してみた！	sugiy
+  - CfPの話だったり。
+  - ニッチな話で攻める方針。
+- Xcode 14 pickup new features	codelynx
+  - リコリコの人の絵コンテアプリ作っている人
+  - Xcodeが便利になったよね〜という話
+  - SF SymbolsがXcode内で検索できるように
+  - Recent Simulatoreは便利。毎回SEでビルドされる悲劇から脱出。
