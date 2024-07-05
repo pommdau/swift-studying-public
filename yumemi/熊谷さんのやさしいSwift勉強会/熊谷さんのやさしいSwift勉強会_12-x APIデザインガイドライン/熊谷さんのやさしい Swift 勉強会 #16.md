@@ -1,0 +1,1 @@
+/Users/ikeh/Programming/Swift/swift-studying-public/yumemi/熊谷さんのやさしいSwift勉強会/熊谷さんのやさしいSwift勉強会_12-x APIデザインガイドライン/
