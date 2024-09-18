@@ -19,7 +19,7 @@
 
 - この画面とかで使えるってことだろうか。
 
-![image](https://i.imgur.com/TbiUtWb.png)
+<img width="400" alt="image" src="https://i.imgur.com/TbiUtWb.png">
 
 >この機能でサイド/ホームボタンの「ダブルクリック」が利用可能になるのは驚きです。👍
 
@@ -30,6 +30,69 @@
 - 有料だけどローカライズのPRを自動で作成してくれるサービス
 
 ## [Concurrency Step\-by\-Step: A Network Request](https://www.massicotte.org/step-by-step-network-request?utm_campaign=iOS%20Dev%20Weekly&utm_medium=web&utm_source=iOS%20Dev%20Weekly%20Issue%20674)
+- 基礎からSwift Concurrencyの実例を実装してわかりやすくて良かった。
+- `task`や`MainActor.run`のバッドプラクティスということも覚えておく
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    
+    @State private var cgImage: CGImage?
+    
+    var body: some View {
+        LoadedImageView(cgImage: cgImage)
+            .task {
+                // SwiftUIのViewは\@MainActorなので、Task内はメインスレッドで実行される
+                // ただしloadImageAsync内の処理のスレッドがどうかは問わない
+                // self.cgImageの更新はメインスレッドで行われる(勿論メイン必須)
+                self.cgImage = await loadImageAsync()
+            }
+    }
+    
+    /// 非同期の画像の取得
+    /// Viewの画像の更新までは行わず、画像取得までとすることで実行スレッドを明確にできる
+    /// nonisolated: Actorの推論を止める。ここではMainAcrotではなくバックグラウンドスレッドで実行されることを意味する
+    private nonisolated func loadImageAsync() async -> CGImage? {
+        let request = URLRequest(url: URL(string: "https://robohash.org/hash-this-text.png")!)
+        guard
+            // URLSessionのメソッドのスレッドの如何は問わない
+            let (data, _) = try? await URLSession.shared.data(for: request),
+            let provider = CGDataProvider(data: data as CFData)
+        else {
+            return nil
+        }
+        return CGImage(
+            pngDataProviderSource: provider,
+            decode: nil,
+            shouldInterpolate: false,
+            intent: .defaultIntent
+        )
+    }
+}
+
+struct LoadedImageView: View {
+    let cgImage: CGImage?
+    
+    var body: some View {
+        if let cgImage {
+            Image(cgImage, scale: 1.0, label: Text("Robot"))
+        } else {
+            Text("no robot yet")
+        }
+    }
+}
+
+#Preview("ContentView") {
+    ContentView()
+}
+
+#Preview("LoadedImageView") {
+    LoadedImageView(cgImage: nil)
+}
+```
+
+
 
 ## [Recursive enums in Swift](https://nilcoalescing.com/blog/RecursiveEnumsInSwift/?utm_campaign=iOS%20Dev%20Weekly&utm_medium=web&utm_source=iOS%20Dev%20Weekly%20Issue%20674)
 - enumで再帰させる方法: `indirect`
