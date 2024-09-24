@@ -28,6 +28,8 @@
 
 - 特殊な使用例？
 - この場合も簡単に書けるよ〜とのこと
+- 下記が参考になるかも
+  - [Swift5\.9からのObservationはどのような仕組みでクラスのプロパティを監視しているのか](https://qiita.com/yimajo/items/017b38b2249c80d34462#observable%E3%81%AEswift-macro)
 
 ![](https://i.imgur.com/Pbl5Pf5.jpeg)
 
