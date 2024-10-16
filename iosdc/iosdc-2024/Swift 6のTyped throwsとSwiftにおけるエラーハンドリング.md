@@ -11,3 +11,8 @@
 - ユースケースは閉じたパッケージやmapなどのジェネリックなパラメータを取る関数を自作しているときなど
 
 ![](https://i.imgur.com/SjKpmDJ.jpeg)
+
+- エラーハンドリングの使い分け
+- この辺は理解しているつもりなのでOK
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/d7a437a2-be10-4aff-a0eb-02e7d5812b0b">
