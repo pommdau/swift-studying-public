@@ -84,6 +84,14 @@ do {
 
 ![image](https://i.imgur.com/yUccTis.png)
 
+- ちなみにUserDefaultsはDaemon経由(`userdefaultsd`)で書き込まれているらしい
+    - https://x.com/malhal/status/1844023872083165485
+- どうりでUserDefaultsのファイルを消しても復活するわけですね
+
+![image](https://i.imgur.com/5vinQoi.png)
+
+![image](https://i.imgur.com/cYHaoZr.png)
+
 ## [Migrating Combine to AsyncAlgorithms](https://blog.jacobstechtavern.com/p/migrating-combine-to-asyncalgorithms?utm_campaign=iOS%20Dev%20Weekly&utm_medium=web&utm_source=iOS%20Dev%20Weekly%20Issue%20683)
 - Combineを使っていて移行したくないけど、2021年にリリースされた[swift\-async\-algorithms](https://github.com/apple/swift-async-algorithms)で完全にCombine < Swift Concurrencyとなったので移行するときの話
 - (序文以降は未読)
