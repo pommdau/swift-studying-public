@@ -11,7 +11,8 @@
 
 - MVVMのViewModelをViewStoreと呼ぶ
 
->https://x.com/koher/status/1503053256196444163
+> https://x.com/koher/status/1503053256196444163
+>
 >![](https://i.imgur.com/b4iLtoU.jpeg)
 
 - あとはStoreパターンを追加したくらいの理解で良さそうか
