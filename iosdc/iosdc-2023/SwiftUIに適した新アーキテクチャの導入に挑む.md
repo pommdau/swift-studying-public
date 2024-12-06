@@ -67,6 +67,9 @@ combineLatestは、これら3つのPublisherを監視し、いずれかが更新
         .assign(to: &$filteredFriends)
 ```
 
+- MVVMと同様にViewModelが肥大化する問題はどうするか。
+- いくつかのUseCaseに分割する？
+
 # スクショ
 
 ![](https://i.imgur.com/vg5h3ad.jpeg)
