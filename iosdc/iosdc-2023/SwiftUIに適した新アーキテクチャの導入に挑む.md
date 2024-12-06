@@ -67,7 +67,11 @@ combineLatestは、これら3つのPublisherを監視し、いずれかが更新
         .assign(to: &$filteredFriends)
 ```
 
-- MVVMと同様にViewModelが肥大化する問題はどうするか。
+- ちらっと出ていたContextという単語は下記の認識で良さそう
+
+![image](https://i.imgur.com/iVjP4ju.png)
+
+- MVVMと同様にViewModelが肥大化する問題はどうするんだろうか。
 - いくつかのUseCaseに分割する？
 
 # スクショ
