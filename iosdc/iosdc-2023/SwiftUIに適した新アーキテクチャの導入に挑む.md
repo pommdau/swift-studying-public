@@ -17,14 +17,16 @@
 
 - あとはStoreパターンを追加したくらいの理解で良さそうか
 
->https://x.com/koher/status/1698223218002403737
+> https://x.com/koher/status/1698223218002403737
+> 
 >![](https://i.imgur.com/ibO5CZI.jpeg)
 
 - MVVMの描画周りの解決というのは、Store-ViewStateをCombineでリアクティブにしたことで解決したのだろう
 - エラーハンドリングはViewState内で行う。
 - 実際にやるならViewStateにエラー用のプロパティを持たせて、それをViewに反映させて表示するのでいけそう
 
->https://x.com/koher/status/1698225394397409481
+> https://x.com/koher/status/1698225394397409481
+>
 >![](https://i.imgur.com/TLh2cqy.jpeg)
 
 ![](https://i.imgur.com/BTUwFo7.jpeg)
@@ -33,6 +35,7 @@
 - ViewStateがRepositoryを持つより、こちらのほうがデータのフローが分かりやすくて良さそう
 
 ![](https://i.imgur.com/66dLiD9.jpeg)
+
 - ViewStateとStoreのバインディングが参考になる
     - https://github.com/pommdau/svvs-sample/blob/main/SVVSSample/UserViewState.swift#L27-L39
 - `UserStore`と`user`のバインディング
