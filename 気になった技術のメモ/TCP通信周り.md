@@ -1,0 +1,2 @@
+- [TN3179: Understanding local network privacy](https://developer.apple.com/documentation/technotes/tn3179-understanding-local-network-privacy)
+- [macOS 15 SequoiaではiOSと同じく、アプリがローカルネットワーク内のデバイスの検索および接続を行う際にユーザーの承認が必要に。](https://applech2.com/archives/20240619-local-network-permission-on-macos-15-sequoia.html)
