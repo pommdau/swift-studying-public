@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DA12C56A2D21E1DE00296345 /* SwiftID in Frameworks */ = {isa = PBXBuildFile; productRef = DA12C5692D21E1DE00296345 /* SwiftID */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DA12C54F2D21DF0B00296345 /* Zoomin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoomin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA12C56A2D21E1DE00296345 /* SwiftID in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = Zoomin;
 			packageProductDependencies = (
+				DA12C5692D21E1DE00296345 /* SwiftID */,
 			);
 			productName = Zoomin;
 			productReference = DA12C54F2D21DF0B00296345 /* Zoomin.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = DA12C5462D21DF0B00296345;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DA12C5682D21E1DE00296345 /* XCRemoteSwiftPackageReference "swift-id" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA12C5502D21DF0B00296345 /* Products */;
 			projectDirPath = "";
@@ -326,6 +335,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA12C5682D21E1DE00296345 /* XCRemoteSwiftPackageReference "swift-id" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koher/swift-id.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA12C5692D21E1DE00296345 /* SwiftID */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA12C5682D21E1DE00296345 /* XCRemoteSwiftPackageReference "swift-id" */;
+			productName = SwiftID;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA12C5472D21DF0B00296345 /* Project object */;
 }
