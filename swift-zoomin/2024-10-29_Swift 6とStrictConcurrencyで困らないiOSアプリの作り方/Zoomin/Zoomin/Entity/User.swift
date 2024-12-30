@@ -25,9 +25,8 @@ import Foundation
 extension User {
     static var sampleData: [User.ID: User] {
         Dictionary(uniqueKeysWithValues: (1...20).map { index in
-            let id = UUID().uuidString
-            return ("\(id)", User(
-                id: "\(id)",
+            return ("user-\(index)", User(
+                id: "user-\(index)",
                 name: "User\(index)",
                 introduction: "これはUser\(index)の紹介文です。"
             ))

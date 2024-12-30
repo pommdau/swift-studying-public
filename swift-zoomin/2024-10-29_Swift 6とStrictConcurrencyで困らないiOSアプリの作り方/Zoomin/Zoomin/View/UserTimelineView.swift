@@ -24,10 +24,7 @@ struct UserTimelineView: View {
                             post: post,
                             user: state.users[post.authorID]
                         )
-                        .background {
-                            Color.blue
-                        }
-//                        .padding()
+                        .padding()
                         Divider()
                     }
                 }
@@ -37,12 +34,6 @@ struct UserTimelineView: View {
                 .disabled(state.isReadMoreButtonDisabled)
                 .padding()
             }
-            .background {
-                Color.red
-            }
-        }
-        .background {
-            Color.green
         }
         .task {
             await state.task()

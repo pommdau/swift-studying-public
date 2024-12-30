@@ -38,9 +38,9 @@ extension Post {
         
         return (1...20).map { index in
             Post(
-                id: "\(UUID().uuidString)",
-                authorID: userIDs[index % userIDs.count], // ユーザーIDを循環使用
-                name: users[userIDs[index % userIDs.count]]!.name,
+                id: "post-\(index)",
+                authorID: "user-\(index)", // ユーザーIDを循環使用
+                name: "User\(index)",
                 content: "これはPost\(index)の内容です。SwiftやiOS開発について書かれています。",
                 time: Date().addingTimeInterval(Double(-index * 3600)) // 1時間ごとに過去の時間を設定
             )
