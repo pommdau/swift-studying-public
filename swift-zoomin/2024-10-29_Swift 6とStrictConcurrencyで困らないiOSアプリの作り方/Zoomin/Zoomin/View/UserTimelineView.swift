@@ -16,16 +16,38 @@ struct UserTimelineView: View {
     }
     
     var body: some View {
-        List(state.posts) { post in
-            PostView(
-                post: post,
-                user: state.users[post.authorID]
-            )
+        ScrollView {
+            LazyVStack {
+                ForEach(state.posts) { post in
+                    VStack {
+                        PostView(
+                            post: post,
+                            user: state.users[post.authorID]
+                        )
+                        .background {
+                            Color.blue
+                        }
+//                        .padding()
+                        Divider()
+                    }
+                }
+                Button("Read more") {
+                    state.readMoreButtonPressed()
+                }
+                .disabled(state.isReadMoreButtonDisabled)
+                .padding()
+            }
+            .background {
+                Color.red
+            }
+        }
+        .background {
+            Color.green
         }
         .task {
             await state.task()
         }
-    }
+    }    
 }
 
 #Preview {

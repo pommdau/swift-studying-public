@@ -29,30 +29,21 @@ struct Post: Sendable, Equatable, Codable, Identifiable {
     }
 }
 
+import Foundation
+
 extension Post {
     static var sampleData: [Post] {
-        [
+        let users = User.sampleData
+        let userIDs = Array(users.keys)
+        
+        return (1...20).map { index in
             Post(
-                id: "99b66859-9a0d-4fd5-922c-7ba873dadea8",
-                authorID: "d1f6f1d6-d846-4ea3-a929-5b82510a6127",
-                name: "@koher",
-                content: "Lorem ipsum dolor sit amet.fugafuga",
-                time: Date()
-            ),
-            Post(
-                id: "4422dac7-1229-4937-9001-e126a686d4eb",
-                authorID: "",
-                name: "@koher2",
-                content: "Lorem ipsum dolor sit amet.hogehoge",
-                time: Date()
-            ),
-            Post(
-                id: "b4778186-ed97-48f5-aa1d-f88fa1883382",
-                authorID: "",
-                name: "@koher3",
-                content: "Lorem ipsum dolor sit amet.piyopiyp",
-                time: Date()
+                id: "\(UUID().uuidString)",
+                authorID: userIDs[index % userIDs.count], // ユーザーIDを循環使用
+                name: users[userIDs[index % userIDs.count]]!.name,
+                content: "これはPost\(index)の内容です。SwiftやiOS開発について書かれています。",
+                time: Date().addingTimeInterval(Double(-index * 3600)) // 1時間ごとに過去の時間を設定
             )
-        ]
+        }
     }
 }

@@ -8,12 +8,23 @@
 import Foundation
 
 enum APIClient {
-    static func userTimeline(for id: User.ID) async throws -> Timeline? {
+    static func userTimeline(for id: User.ID, before: Post.ID? = nil) async throws -> Timeline? {
         
-        return Timeline(posts: Post.sampleData, users: User.sampleData)        
+        if before != nil {
+            return Timeline(posts: Array(Post.sampleData[10...19]), users: User.sampleData)
+        } else {
+            return Timeline(posts: Array(Post.sampleData[0...9]), users: User.sampleData)
+        }
         
         var urlComponents: URLComponents = .init(string: "http://localhost:8080/user-timeline")!
         urlComponents.queryItems = [.init(name: "id", value: id.rawValue)]
+        
+        if let before {
+            urlComponents.queryItems?.append(
+                .init(name: "before", value: before.rawValue)
+            )
+        }
+        
         let (data, response): (Data, URLResponse)
         do {
             (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
