@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        UserTimelineView(id: "d1f6f1d6-d846-4ea3-a929-5b82510a6127")
-            .padding()
+//        UserTimelineView(id: "d1f6f1d6-d846-4ea3-a929-5b82510a6127")
+//        LoginView()
+        RootView()
     }
 }
 
