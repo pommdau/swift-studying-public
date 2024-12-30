@@ -13,6 +13,8 @@ struct PostView: View {
     let user: User?
     
     var body: some View {
+        
+        let _ = print("(ΦωΦ)", post)
         HStack(alignment: .top) {
             Image(systemName: "person.circle")
                 .resizable()

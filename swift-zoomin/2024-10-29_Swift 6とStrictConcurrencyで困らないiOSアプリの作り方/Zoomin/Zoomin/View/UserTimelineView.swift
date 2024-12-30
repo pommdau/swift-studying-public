@@ -9,50 +9,60 @@ import SwiftUI
 
 struct UserTimelineView: View {
     
-    let posts: [Post]
-    let users: [User.ID: User]
+    @StateObject private var state: UserTimelineViewState
+    
+    init(id: User.ID) {
+        _state = .init(wrappedValue: .init(id: id))
+    }
     
     var body: some View {
-        List(posts) { post in
+        List(state.posts) { post in
             PostView(
                 post: post,
-                user: users[post.authorID]
+                user: state.users[post.authorID]
             )
+        }
+        .task {
+            await state.task()
         }
     }
 }
 
 #Preview {
-    UserTimelineView(
-        posts: [
-            Post(
-                id: "",
-                authorID: "",
-                name: "@koher",
-                content: "Lorem ipsum dolor sit amet.",
-                time: Date()
-            ),
-            Post(
-                id: "",
-                authorID: "",
-                name: "@koher",
-                content: "Lorem ipsum dolor sit amet.",
-                time: Date()
-            ),
-            Post(
-                id: "",
-                authorID: "",
-                name: "@koher",
-                content: "Lorem ipsum dolor sit amet.",
-                time: Date()
-            )
-        ],
-        users: [
-            "": User(
-                id: "",
-                name: "koher",
-                introduction: "<intro>"
-            )
-        ]
-    )
+    UserTimelineView(id: "d1f6f1d6-d846-4ea3-a929-5b82510a6127")
 }
+
+//#Preview {
+//    UserTimelineView(
+//        posts: [
+//            Post(
+//                id: "",
+//                authorID: "",
+//                name: "@koher",
+//                content: "Lorem ipsum dolor sit amet.",
+//                time: Date()
+//            ),
+//            Post(
+//                id: "",
+//                authorID: "",
+//                name: "@koher",
+//                content: "Lorem ipsum dolor sit amet.",
+//                time: Date()
+//            ),
+//            Post(
+//                id: "",
+//                authorID: "",
+//                name: "@koher",
+//                content: "Lorem ipsum dolor sit amet.",
+//                time: Date()
+//            )
+//        ],
+//        users: [
+//            "": User(
+//                id: "",
+//                name: "koher",
+//                introduction: "<intro>"
+//            )
+//        ]
+//    )
+//}
