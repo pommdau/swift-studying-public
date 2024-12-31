@@ -10,7 +10,7 @@ import Combine
 
 struct RootView: View {
     
-    @StateObject private var state: RootViewState = .init()
+    @State private var state: RootViewState = .init()
     
     var body: some View {
         Group {
@@ -22,19 +22,30 @@ struct RootView: View {
     }
 }
 
-@MainActor
-final class RootViewState: ObservableObject {
-    @Published private(set) var loginContext: LoginContext?
-    
-    init() {
-        // LoginContextStoreの変更をloginContextに伝える
-        LoginContextStore.shared.$value.assign(to: &$loginContext)
+@MainActor @Observable
+final class RootViewState {
+    var loginContext: LoginContext? {
+        LoginContextStore.shared.value
     }
     
     var presentsLoginView: Bool {
         loginContext == nil
     }
 }
+
+//@MainActor
+//final class RootViewState: ObservableObject {
+//    @Published private(set) var loginContext: LoginContext?
+//
+//    init() {
+//        // LoginContextStoreの変更をloginContextに伝える
+//        LoginContextStore.shared.$value.assign(to: &$loginContext)
+//    }
+//
+//    var presentsLoginView: Bool {
+//        loginContext == nil
+//    }
+//}
 
 #Preview {
     RootView()
