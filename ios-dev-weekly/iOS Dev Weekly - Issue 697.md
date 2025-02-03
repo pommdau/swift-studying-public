@@ -1,7 +1,5 @@
 # [iOS Dev Weekly - Issue 697](https://iosdevweekly.com/issues/697/)
 
-
-
 ## Comment
 - iPadでゲーム開発の話？
 
@@ -93,6 +91,11 @@ VStack {
 
 - 実行例
 
+https://github.com/user-attachments/assets/f69083c8-64c7-4031-aedd-e8ea6fc469be
+
+<details>
+<summary>サンプルコード</summary>
+
 ```swift
 import SwiftUI
 
@@ -138,6 +141,8 @@ struct ContentView: View {
 }
 ```
 
+</details>
+
 ## Objective by the Sea v7.0 のビデオ
 
 - https://www.youtube.com/playlist?list=PLliknDIoYszuWU8jz_QzSrzlpRot4Vrn5
@@ -149,4 +154,4 @@ struct ContentView: View {
     - https://www.theverge.com/2024/6/12/24176917/macos-sequoia-wallpaper-classic-macintosh-icons-susan-kare
 - 色もランダムにできるしレトロ感が結構好き
 
-![image](https://i.imgur.com/iqf8zth.png)
+<img width="400" alt="image" src="https://i.imgur.com/iqf8zth.png">
