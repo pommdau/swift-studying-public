@@ -1,7 +1,19 @@
 # 概要
-- AppleとしてはLanuchScreenと呼ぶ(Splash Screenは存在しない)
+## 公式
+- [Launching | Apple Developer Documentation](https://developer.apple.com/design/human-interface-guidelines/launching)
 - [アプリの起動画面の指定 | Apple Developer Documentation](https://developer.apple.com/documentation/xcode/specifying-your-apps-launch-screen)
-  - これを読む限りだとルートビューのモックを表示する(TabViewだけあってコンテンツが空のようなもの)、みたいだけど、情報が古いかもしれない
+- これを読む限りだとルートビューのモックを表示する(TabViewだけあってコンテンツが空のようなもの)、みたい。
+- でもこの画像をどうやって用意するんだという問題がある。画面サイズ毎に作るのは…設定も恐らくできない。
+- 古い実装?だとStoryboardがあるので多分その想定とは思う。
+
+![image](https://i.imgur.com/n5ASqVI.png)
+
+- ただ現在の設定ではなさそうなので、現在のペストプラクティスを知りたい
+  - 後述の通り背景色やアイコンだけの簡単なやつで良いのかもしれない
+
+## その他
+
+- AppleとしてはLanuchScreenと呼ぶ(Splash Screenは存在しない)
 - とりあえずロゴを表示したりなどのブランディングをするのはアンチパターン
 - SwiftUIで検索するとRootのOnAppearでDispatchQueueで一定秒表示する例があるが、これは非常に良くなさそう
 - デバイスの性能が上がり起動が早くなった今、そんなにこだわらなくてもいいのかも
