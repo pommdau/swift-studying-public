@@ -15,7 +15,7 @@
 
 - AppleとしてはLanuchScreenと呼ぶ(Splash Screenは存在しない)
 - とりあえずロゴを表示したりなどのブランディングをするのはアンチパターン
-- SwiftUIで検索するとRootのOnAppearでDispatchQueueで一定秒表示する例があるが、これは非常に良くなさそう
+- SwiftUIで検索するとRootのOnAppearでDispatchQueueで一定秒表示する例があるが絶対アンチパターンだろう
 - デバイスの性能が上がり起動が早くなった今、そんなにこだわらなくてもいいのかも
   - [Splash screen vs Launch screen in iOS | Sarunw](https://sarunw.com/posts/splash-screen-vs-launch-screen/)
   - [雰囲気でLaunchScreenをやっていた](https://zenn.dev/ryomm/articles/a9852f1b09b6b8)
