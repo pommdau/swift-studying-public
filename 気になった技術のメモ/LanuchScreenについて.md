@@ -27,5 +27,5 @@
 >設定したとしても背景色のみで十分。
 >iOS16でアップル純正のプリインストールアプリをいくつか調査しましたが、特別なLaunch Screenは設定されておらず、デフォルト設定となっているようです。
 
-- シュミレータを再起動しないと変更確認できないのは確かにそうみたい
+- 変更確認はシュミレータを再起動する点に注意。不便〜
     - https://stackoverflow.com/questions/66927229/launch-screen-added-from-info-plist-is-not-working-for-swiftui-2-0-in-ios14-0
