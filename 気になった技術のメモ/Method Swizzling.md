@@ -1,4 +1,10 @@
 - 実装がわかりにくくなるので、マルチモジュールのモジュール単位での導入などはありよりだと思った。
+
+>SwiftUIはUIKit/AppKitをラップする宣言的フレームワークであり、多くの内部処理はObjective-CランタイムではなくSwiftの構造体・関数・ジェネリクスで構築されています。
+>Method Swizzling（＝Objective-Cランタイムのmethod_exchangeImplementationsによるメソッド実装のすり替え）は、NSObjectを継承するクラスメソッドにしか適用できません。
+
+- SwiftUIでは難しそうか
+
 - 参考
   - [Method Swizzlingを行うライブラリにおけるマルチモジュール設計 - Speaker Deck](https://speakerdeck.com/yoshikma/method-swizzlingwoxing-uraiburariniokerumarutimoziyurushe-ji)
   - [Swiftのライフサイクル系メソッドに、共通処理を差し込む方法（Method Swizzling） · すっさんぽ](https://sussan-po.com/2021/05/01/method-swizzling-in-swift/)
