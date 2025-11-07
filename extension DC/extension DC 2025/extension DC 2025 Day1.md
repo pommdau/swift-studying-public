@@ -5,6 +5,7 @@
 - [Pull-Requestの内容を1クリックで動作確認可能にするワークフロー - Speaker Deck](https://speakerdeck.com/natmark/extension-dc-2025-tophat)
 - PR後、iOSシュミレーターで利用できる形式でビルドしたものをダウンロードできるようにする
 - [Shopify/tophat: Easily install and test mobile applications with a single click.](https://github.com/Shopify/tophat)
+- これは実際に試してみたい
 
 ## 5分LT枠	Takeshi Tanaka	Foundation ModelsでオンデバイスRAGを試みる
 
