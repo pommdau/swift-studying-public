@@ -16,7 +16,7 @@
 ## A Month With OpenAI’s Codex
 - ChatGPTのCodexを利用して色々開発した話
 - https://www.highcaffeinecontent.com/blog/20260301-A-Month-With-OpenAIs-Codex
-- 必須スキルなんだと思わされる。AIによってできることの幅が広がるのである。
+- 実践的に活用していて参考になりそう
 
 ## Learning to develop more accessible iOS games
 - ゲームアプリのアクセシビリティを考える
