@@ -16,6 +16,7 @@ let y = ModuleB::getValue() // Call 'getValue' from ModuleB
 ## [brrr](https://brrr.now/)
 - 通知を送るだけのアプリ
 - 登録不要でシンプルさが良い
+- `curl`でPush通知を飛ばせるので、個人でのカスタマイズ次第で利用方法が広がる
 
 ## [Expanding Animations in SwiftUI Lists | Pavel Zak’s dev blog](https://nerdyak.tech/development/2026/03/16/expand-animation-in-SwiftUI-List.html)
 - リスト開閉アニメーション。`DisclosureGroup`があるがカスタムしたい場合に。
