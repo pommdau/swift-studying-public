@@ -38,11 +38,16 @@ struct RoomsApp: App {
     var body: some Scene {
         WindowGroup {
             RoomListScreen()
-                .modelContainer(container) // RoomListScreen以下のViewにModelContextを使えるようになる
+            /*
+             // RoomListScreen以下のViewでModelContextを使えるようになる
+             
+             ModelContainer = SQLiteファイルやDB接続設定を持つ箱
+             ModelContext   = その箱に対して読み書きするセッション
+             */
+                .modelContainer(container)
                 .task {
                     container.mainContext.author = "App"
-                }
-            
+                }            
         }
     }
 }
